@@ -1,3 +1,4 @@
+package model;
 /*Добавить в модельные классы набор полей на своё усмотрение, но обязательными являются:
 для University — String id, String fullName, String shortName,
 int yearOfFoundation, StudyProfile mainProfile;*/

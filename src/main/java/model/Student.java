@@ -1,3 +1,4 @@
+package model;
 /*для Student — String fullName, String universityId, int currentCourseNumber,
 float avgExamScore. */
 public class Student {

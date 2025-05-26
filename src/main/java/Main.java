@@ -1,3 +1,7 @@
+import model.Student;
+import model.StudyProfile;
+import model.University;
+
 import java.util.ArrayList;
 import java.util.List;
 
