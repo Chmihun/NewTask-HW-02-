@@ -6,6 +6,7 @@ public class Student {
     private String universityId;
     private int currentCourseNumber;
     private float avgExamScore;
+    private static  int count=0;
 
     public Student() {
     }
@@ -15,6 +16,7 @@ public class Student {
         this.currentCourseNumber = currentCourseNumber;
         this.fullName = fullName;
         this.universityId = universityId;
+        count++;
     }
 
     public float getAvgExamScore() {
@@ -55,11 +57,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "avgExamScore=" + avgExamScore +
-                ", fullName='" + fullName + '\'' +
-                ", universityId='" + universityId + '\'' +
-                ", currentCourseNumber=" + currentCourseNumber +
-                '}';
+        return "{Student   " +
+                currentCourseNumber + " "+
+                fullName + " "+
+                universityId + " " +
+                avgExamScore +
+                '}'+"\n" ;
     }
+
 }

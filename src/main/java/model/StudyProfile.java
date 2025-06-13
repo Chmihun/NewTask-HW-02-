@@ -2,9 +2,9 @@ package model;
 
 public enum StudyProfile {
     MEDICINE("Медицина"),
-    ENGINEERING("Инженерия"),
-    ARTS("Искусство");
-
+    PHYSICS("Физика"),
+    LINGUISTICS("ЛИНГВИСТИКА"),
+    MATHEMATICS("Математика");
     private final String profileName;
 
     StudyProfile(String profileName) {

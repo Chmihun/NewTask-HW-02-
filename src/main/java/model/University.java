@@ -1,4 +1,7 @@
 package model;
+
+import java.util.Objects;
+
 /*Добавить в модельные классы набор полей на своё усмотрение, но обязательными являются:
 для University — String id, String fullName, String shortName,
 int yearOfFoundation, StudyProfile mainProfile;*/
@@ -10,6 +13,19 @@ public class University {
     private StudyProfile mainProfile;
 
     public University() {
+    }
+
+    public University(
+            String fullName,
+            String id,
+            StudyProfile mainProfile,
+            String shortName,
+            int yearOfFoundation) {
+        this.fullName = fullName;
+        this.id = id;
+        this.mainProfile = mainProfile;
+        this.shortName = shortName;
+        this.yearOfFoundation = yearOfFoundation;
     }
 
     public String getFullName() {
@@ -61,12 +77,25 @@ public class University {
 
     @Override
     public String toString() {
-        return "University{" +
-                "fullName='" + fullName + '\'' +
-                ", id='" + id + '\'' +
-                ", shortName='" + shortName + '\'' +
-                ", yearOfFoundation=" + yearOfFoundation +
-                ", mainProfile=" + mainProfile.getProfileName() +
-                '}';
+        return "University{ " +
+                id + " " + '\'' +
+                fullName+ " " + '\'' +
+                shortName + " " + '\'' +
+                yearOfFoundation + " " +
+                mainProfile.getProfileName() +
+                " }" + "\n";
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        University that = (University) object;
+        return yearOfFoundation == that.yearOfFoundation && Objects.equals(id, that.id) && Objects.equals(fullName, that.fullName) && Objects.equals(shortName, that.shortName) && mainProfile == that.mainProfile;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, fullName, shortName, yearOfFoundation, mainProfile);
     }
 }
